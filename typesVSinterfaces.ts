@@ -79,6 +79,7 @@ const $: JQearyI = {
 
 //////////////// Type
 // na maioria das vezes
+// React - Props
 
 ////////////////Interfaces ////////////
 // quando estiver criando bibliotecas é preferivel usar 
