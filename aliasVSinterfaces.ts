@@ -1,6 +1,6 @@
 // TYPE ALIAS
 
-// Definition=======================
+//Type Definition=======================
 type GameT = {
     title: string;
 };
@@ -18,15 +18,15 @@ interface DLCI{
     extraI:string;
 };
 
-// Intersection=====================
+//Type Intersection=====================
 
-type GameCollectionT = Game & DLCT;
+type GameCollectionT = Game & DLCT & {content:boolean};
 
 /////////// Interface Intersection /////////////////////
 
 interface GameCollectionI extends GameI, DLCI {};
 
-// Implements========================
+//Type Implements========================
 
 class CreateGameT implements GameCollection {};
 
@@ -34,7 +34,7 @@ class CreateGameT implements GameCollection {};
 
 class CreateGameI implements GameCollectionI {};
 
-// Function Declaration===========================
+//Type Function Declaration===========================
 
 type getSimilarsT = (title:string) => void;
 
@@ -44,15 +44,15 @@ interface getSimilarsI {
     (title:string): void;
 }
 
-// ====== Diference bethen Alias and Interface ===== //
+// ====== Diference bethen Type and Interface ===== //
 
-//Alias permite declarar tipos primitivos
+//Type permite declarar tipos primitivos
 type IDT = string | number;
 //Interface NAO declara tipos primitivos
 interface ID extends number {}
 
 
-//Alias pode declarar tuplas
+//Type pode declarar tuplas
 type TupleT = [number,number];
 [1,2] as TupleT;
 //Interface NAO declara tuplas
@@ -62,7 +62,7 @@ interface Tuple {
 };
 [1,2,3,4,5,6] as Tuple;
 
-//Alias NAO declara mais de 1 escopo
+//Type NAO declara mais de 1 escopo
 type JQearyT = {a:string};
 type JQearyT = {b:string};
 //Interface PODE ter multiplas declaraçoes e podem ser unidas
@@ -76,3 +76,11 @@ const $: JQearyI = {
     a:"fii",
     b:"foo"
 }
+
+//////////////// Type
+// na maioria das vezes
+
+////////////////Interfaces ////////////
+// quando estiver criando bibliotecas é preferivel usar 
+// Interfaces, pois sao mais extensiveis.preferivel para POO
+
