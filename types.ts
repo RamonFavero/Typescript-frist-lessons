@@ -1,7 +1,7 @@
 // boolean (true / false)
 let isOpen: boolean;
 isOpen = true
-isOpen = "<< check the error"
+// isOpen = "<< check the error"
 
 // string ('foo', "foo", `foo`)
 let message: string
@@ -54,11 +54,11 @@ cart = {
 
 // TYPE INFERENCE (when type is already defined by default)
 let message2 = "mensagem definida"
-message2 = 1 //< veja o erro
+// message2 = 1 //< veja o erro
 message2= "string nova"
 
 window.addEventListener('click', (e)=>{
     console.log(e.target); // < typing e. shows every possible use of mouseEvent
-    console.log(e.foo); 
+    // console.log(e.foo); 
     
 });
