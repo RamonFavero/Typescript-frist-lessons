@@ -28,11 +28,11 @@ interface GameCollectionI extends GameI, DLCI {};
 
 //Type Implements========================
 
-class CreateGameT implements GameCollection {};
+// class CreateGameT implements GameCollection {};
 
 ///////////Interface Implement ///////////////
 
-class CreateGameI implements GameCollectionI {};
+// class CreateGameI implements GameCollectionI {};
 
 //Type Function Declaration===========================
 
@@ -49,7 +49,8 @@ interface getSimilarsI {
 //Type permite declarar tipos primitivos
 type IDT = string | number;
 //Interface NAO declara tipos primitivos
-interface ID extends number {}
+
+//interface ID extends number {}
 
 
 //Type pode declarar tuplas
@@ -63,8 +64,8 @@ interface Tuple {
 [1,2,3,4,5,6] as Tuple;
 
 //Type NAO declara mais de 1 escopo
-type JQearyT = {a:string};
-type JQearyT = {b:string};
+// type JQearyT = {a:string};
+// type JQearyT = {b:string};
 //Interface PODE ter multiplas declaraçoes e podem ser unidas
 interface JQearyI {
     a:string;
