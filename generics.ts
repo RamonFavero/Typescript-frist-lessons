@@ -23,7 +23,7 @@ const newState = useState();
 newState.setState("foo");
 console.log(newState.getState());
 
-newState.setState(123);
+newState.setState("");// can not be a number
 console.log(newState.getState());
 
 newState.setState("bla");
